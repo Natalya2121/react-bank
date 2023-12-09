@@ -1,0 +1,64 @@
+.page__button-recive {
+    display: flex;
+    width: 100%;
+    padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+    background: #FFF;
+}
+
+.recive__item-right{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.recive__item-image {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 83.333px;
+    background: #F7F7F7;
+    /* background-image: url('sending.svg'); */
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.recive__item-image--stripe {
+    background-image: url('stripe.svg');
+}
+
+.recive__item-image--coinbase {
+    background-image: url('coinbase.svg');
+}
+
+.recive__item-info-title {
+    color: #1D1D1F;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.recive__item-left{
+    width: 160px;
+    height: 20px;
+    background-image: url('signs.svg');
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.divider {
+    border: 1px solid #E9E8EB;
+}
+
+.recive__paysystem {
+    color: #000;
+    text-align: right;
+    align-self: self-start;
+    font-size: 16px;
+    font-weight: 500;
+}

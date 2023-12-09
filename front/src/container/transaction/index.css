@@ -1,0 +1,58 @@
+
+
+.page {
+    background-color: #F5F5F7;
+}
+
+.transaction__sum {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 500;
+    color: #000;
+}
+
+.transaction__sum--green {
+    color: #24B277;
+}
+
+.box {
+    width: 100%;
+    background-color: #FFF;
+    border: 1px solid transparent;
+    padding: 16px;
+}
+
+.transaction__items {
+    display: flex;
+    width: 100%;
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    border-radius: 12px;
+    background: #FFF;
+}
+ 
+.transaction__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+.transaction__item-left {
+    color:  #1D1D1F;
+    text-align: center;
+    font-size: 14px;
+}
+
+.transaction__item-right {
+    color:  #1D1D1F;
+    text-align: center;
+    font-size: 14px;
+}
+
+.divider {
+    border: 1px solid #E9E8EB;
+}
+

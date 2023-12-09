@@ -11,3 +11,10 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(<App />);
+
+// root.render(
+//   <React.StrictMode>
+//     <App/>
+//   </React.StrictMode>
+// );
+

@@ -2,6 +2,7 @@ import "./index.css";
 import { Page } from "../../component/page";
 import { BackButton } from "../../component/back-button";
 import { Field } from "../../component/field";
+import { FieldSum } from "../../component/field-sum";
 import React, {useState, useCallback, useReducer, useContext} from "react";
 import {
     requestReducer,
@@ -208,7 +209,7 @@ const checkDisabled = (name:string) => {
 
         <div className="form">
             <div className="form__item">
-                <Field
+                <FieldSum
                     placeholder=""
                     label="Sum"
                     action={handleChange}

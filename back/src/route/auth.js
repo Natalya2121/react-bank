@@ -679,9 +679,10 @@ router.post('/change-email', function (req, res) {
     token = sessionOld.token
 
     const user = User.getByEmail(email)
-    if (user) {
+
+    if (user !== null) {
       Notification.create(
-        { token: token, userOld },
+        { token: token, user: { email: emailOld } },
         {
           operation: 'CHANGE-EMAIL',
           status: 'WARNING',
@@ -697,7 +698,7 @@ router.post('/change-email', function (req, res) {
 
     if (password !== userOld.password) {
       Notification.create(
-        { token: token, userOld },
+        { token: token, user: { email: emailOld } },
         {
           operation: 'CHANGE-EMAIL',
           status: 'WARNING',

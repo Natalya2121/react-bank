@@ -45,6 +45,8 @@ class User {
 
   static getList = () => this.#list
 
+  static getListEmail = () => this.#list.map((user)=>user.email)
+
   static getById(id) {
     return this.#list.find((user) => user.id === id) || null
   }

@@ -59,6 +59,7 @@ const [state, dispatch] = useReducer(requestReducer, requestInitialState);
 
     return { list:list_data,
       summa: (s>=0?"+$":"-$")+Math.abs(s).toFixed(2),
+      classItems: ("trans__items "+(list_data.length<=8?"":"trans__scrollbar")),
     }
 };
 
@@ -108,7 +109,9 @@ const [state, dispatch] = useReducer(requestReducer, requestInitialState);
       )}
 
       {(state.status as any) === REQUEST_ACTION_TYPE.SUCCESS && (
-        <Fragment>
+        // <Fragment>
+        <div className={(state.data as any).classItems}>
+
           {(state.data as Data).list.length===0 ? (
             <Alert message="Список транзакцій порожній" />
           ) : (
@@ -139,8 +142,9 @@ const [state, dispatch] = useReducer(requestReducer, requestInitialState);
               </Fragment>
             ))
           )}
-        </Fragment>
-      )}
+        </div>
+        // </Fragment>
+        )}
 
 
     </div>

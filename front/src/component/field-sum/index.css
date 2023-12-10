@@ -1,0 +1,23 @@
+
+.fieldsum__wrapper {
+	width: 100%;
+	display: grid;
+
+	position: relative;
+}
+
+.fieldsum__icon {
+	display: block;
+	height: 20px;
+	width: 10px;
+
+	position: absolute;
+	left: 16px;
+	top: calc(50% - 10px);
+}
+
+
+.field__input {
+	padding-left: 26px;
+}
+

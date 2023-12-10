@@ -43,12 +43,13 @@ const [state, dispatch] = useReducer(requestReducer, requestInitialState);
   }, []);
 
  
-  const convertData = (raw: Data): Data => {
+  const convertData = (raw: Data): Data | any=> {
     const list_data:Array<object> = raw.list.reverse().map((item) => 
     ({id:(item as any).id, operation:(item as any).operation, status:(item as any).status, message:(item as any).message, date: getDate((item as any).date), classname: (("notification__item-image ")+(((item as any).status!=="SUCCESS")?"notification__item-image--danger":"")) })
     )
 
     return { list:list_data,
+      classItems: ("notification__items "+(list_data.length<=8?"":"notification__scrollbar")),
   }
 };
 
@@ -81,7 +82,8 @@ const [state, dispatch] = useReducer(requestReducer, requestInitialState);
       )}
 
       {(state.status as any) === REQUEST_ACTION_TYPE.SUCCESS && (
-        <Fragment>
+        //  <Fragment>
+        <div className={(state.data as any).classItems}>
           {(state.data as Data).list.length===0 ? (
             <Alert message="Список пустий" />
           ) : (
@@ -108,8 +110,9 @@ const [state, dispatch] = useReducer(requestReducer, requestInitialState);
               </Fragment>
             ))
           )}
-        </Fragment>
-      )}
+        </div>
+        // </Fragment>
+        )}
 
       </div>
     </Page>
